@@ -1,3 +1,41 @@
+import Header from '@/components/layout/Header';
+import Hero from '@/components/sections/Hero';
+import Services from '@/components/sections/Services';
+import Kpis from '@/components/sections/Kpis';
+import Projects from '@/components/sections/Projects';
+import Testimonials from '@/components/sections/Testimonials';
+import Insights from '@/components/sections/Insights';
+import Contact from '@/components/sections/Contact';
+import Footer from '@/components/sections/Footer';
+
 export default function Home() {
-  return <></>;
+  return (
+    <div className="flex min-h-screen flex-col">
+      <Header />
+      <main className="flex-1">
+        <section id="about" className="w-full pt-20 md:pt-24 lg:pt-32">
+          <Hero />
+        </section>
+        <section id="skills" className="w-full py-12 md:py-24 lg:py-32 bg-card">
+          <Services />
+        </section>
+        <section id="experience" className="w-full py-12 md:py-24 lg:py-32">
+          <Kpis />
+        </section>
+        <section id="projects" className="w-full py-12 md:py-24 lg:py-32 bg-card">
+          <Projects />
+        </section>
+        <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32">
+          <Testimonials />
+        </section>
+        <section id="insights" className="w-full py-12 md:py-24 lg:py-32 bg-card">
+          <Insights />
+        </section>
+        <section id="contact" className="w-full py-12 md:py-24 lg:py-32">
+          <Contact />
+        </section>
+      </main>
+      <Footer />
+    </div>
+  );
 }
