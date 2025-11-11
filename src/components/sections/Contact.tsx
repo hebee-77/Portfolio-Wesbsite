@@ -12,26 +12,26 @@ const contactDetails = [
     },
     {
         icon: Mail,
-        text: 'vineethgattu065@gmail.com',
-        href: 'mailto:vineethgattu065@gmail.com',
+        text: 'hebeectr2004@gmail.com',
+        href: 'mailto:hebeectr2004@gmail.com',
         isLink: true,
     },
     {
         icon: Phone,
-        text: '+91 9441450417',
-        href: 'tel:+919441450417',
+        text: '+91 6302514642',
+        href: 'tel:+916302514642',
         isLink: true,
     },
     {
         icon: Github,
         text: 'GitHub',
-        href: '#',
+        href: 'https://github.com/hebee-77',
         isLink: true,
     },
     {
         icon: Linkedin,
         text: 'LinkedIn',
-        href: '#',
+        href: 'https://www.linkedin.com/in/hebee/',
         isLink: true,
     },
 ];
@@ -46,7 +46,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {contactDetails.map((detail, index) => {
             const content = (
-              <div key={index} className="flex items-center gap-4">
+              <div className="flex items-center gap-4">
                 <detail.icon className="h-6 w-6 text-primary" />
                 <span className="text-foreground">{detail.text}</span>
               </div>
@@ -54,12 +54,12 @@ const Contact = () => {
 
             if (detail.isLink) {
               return (
-                <Link href={detail.href} target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-80">
+                <Link key={detail.href} href={detail.href} target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-80">
                   {content}
                 </Link>
               );
             }
-            return content;
+            return <div key={detail.text}>{content}</div>;
           })}
         </div>
       </div>
