@@ -3,7 +3,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { PlayCircle } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import ResumeBuilder from './ResumeBuilder';
 import { useState } from 'react';
@@ -26,14 +25,10 @@ const Hero = () => {
             </p>
             <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 justify-center lg:justify-start">
               <Button size="lg" onClick={() => setIsResumeBuilderOpen(true)}>
-                Download Resume
+                AI Resume Builder
               </Button>
               <Button size="lg" variant="outline" asChild>
                 <Link href="#projects">View Projects</Link>
-              </Button>
-              <Button size="lg" variant="ghost">
-                <PlayCircle className="mr-2 h-5 w-5" />
-                Watch Demo
               </Button>
             </div>
           </div>
