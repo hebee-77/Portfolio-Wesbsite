@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-2 text-lg font-bold text-primary">
             <BarChart2 className="h-5 w-5" />
-            <span>Alex Doe</span>
+            <span>Hebee E</span>
           </div>
           <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
             {navLinks.map((link) => (
@@ -29,7 +29,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 text-center text-sm text-muted-foreground border-t pt-6">
-          <p>&copy; {new Date().getFullYear()} Alex Doe. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Hebee E. All rights reserved.</p>
         </div>
       </div>
     </footer>

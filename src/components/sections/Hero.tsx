@@ -17,7 +17,7 @@ const Hero = () => {
         <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2">
           <div className="space-y-6 text-center lg:text-left">
             <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-              Alex Doe
+              Hebee E
               <span className="block text-primary">Data Analyst</span>
             </h1>
             <p className="text-lg text-muted-foreground">

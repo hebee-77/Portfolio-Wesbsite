@@ -57,7 +57,7 @@ export default function ResumeBuilder({ open, onOpenChange }: ResumeBuilderProps
   const { register, handleSubmit, formState: { errors }, reset } = useForm<ResumeFormData>({
     resolver: zodResolver(ResumeSchema),
     defaultValues: {
-      name: 'Alex Doe',
+      name: 'Hebee E',
       contactInformation: 'alex.doe@email.com | 555-123-4567 | linkedin.com/in/alexdoe',
       desiredJobTitle: 'Data Analyst',
       experience: '3+ years of experience as a data analyst, specializing in e-commerce. Proven ability to translate business questions into analytical frameworks. Led a project to analyze customer purchase behavior, which resulted in a 15% increase in repeat purchases. Built and maintained dashboards in Tableau, providing key stakeholders with real-time insights into sales performance. Automated several reporting processes using Python and SQL, saving approximately 10 hours of manual work per week.',

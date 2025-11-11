@@ -64,7 +64,7 @@ const Header = () => {
           <div className="flex items-center">
             <Link href="#home" className="flex items-center gap-2 text-xl font-bold text-primary">
               <BarChart2 className="h-6 w-6" />
-              <span>Alex Doe</span>
+              <span>Hebee E</span>
             </Link>
           </div>
           <div className="hidden md:block">
@@ -83,7 +83,7 @@ const Header = () => {
                 <div className="flex justify-between items-center p-4 border-b">
                    <Link href="#home" className="flex items-center gap-2 text-lg font-bold text-primary">
                       <BarChart2 className="h-5 w-5" />
-                       <SheetClose asChild><span>Alex Doe</span></SheetClose>
+                       <SheetClose asChild><span>Hebee E</span></SheetClose>
                     </Link>
                   <SheetClose asChild>
                     <Button variant="ghost" size="icon" aria-label="Close menu">
