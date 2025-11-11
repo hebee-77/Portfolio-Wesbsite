@@ -10,7 +10,7 @@ export default function Home() {
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
-        <section id="about" className="w-full pt-20 md:pt-24 lg:pt-32">
+        <section id="home" className="w-full pt-20 md:pt-24 lg:pt-32">
           <Hero />
         </section>
         <section id="skills" className="w-full py-12 md:py-24 lg:py-32 bg-card">

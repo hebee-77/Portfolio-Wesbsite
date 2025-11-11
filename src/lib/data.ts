@@ -28,7 +28,7 @@ const findImage = (id: string) => {
 };
 
 export const navLinks: NavLink[] = [
-  { label: 'About', href: '#about' },
+  { label: 'Home', href: '#home' },
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
   { label: 'Contact', href: '#contact' },

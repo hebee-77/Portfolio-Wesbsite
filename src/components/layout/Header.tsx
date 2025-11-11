@@ -10,14 +10,14 @@ import { navLinks } from '@/lib/data';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeLink, setActiveLink] = useState('#about');
+  const [activeLink, setActiveLink] = useState('#home');
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
 
       const sections = navLinks.map(link => document.querySelector(link.href));
-      let current = '#about';
+      let current = '#home';
       for (const section of sections) {
         if (section && window.scrollY >= (section as HTMLElement).offsetTop - 100) {
           current = `#${section.id}`;
@@ -62,7 +62,7 @@ const Header = () => {
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
-            <Link href="#about" className="flex items-center gap-2 text-xl font-bold text-primary">
+            <Link href="#home" className="flex items-center gap-2 text-xl font-bold text-primary">
               <BarChart2 className="h-6 w-6" />
               <span>Alex Doe</span>
             </Link>
@@ -81,7 +81,7 @@ const Header = () => {
               </SheetTrigger>
               <SheetContent side="right">
                 <div className="flex justify-between items-center p-4 border-b">
-                   <Link href="#about" className="flex items-center gap-2 text-lg font-bold text-primary">
+                   <Link href="#home" className="flex items-center gap-2 text-lg font-bold text-primary">
                       <BarChart2 className="h-5 w-5" />
                        <SheetClose asChild><span>Alex Doe</span></SheetClose>
                     </Link>
