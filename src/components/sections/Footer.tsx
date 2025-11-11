@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import { BarChart2 } from 'lucide-react';
 import { socialLinks, navLinks } from '@/lib/data';
+import { cn } from '@/lib/utils';
 
 const Footer = () => {
   return (
-    <footer className="bg-card border-t">
+    <footer className={cn("glassmorphic-card", "bg-transparent mt-auto")}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-2 text-lg font-bold text-primary">

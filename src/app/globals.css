@@ -6,6 +6,13 @@
   :root {
     --background: 206 17% 93%;
     --foreground: 200 65% 10%;
+    
+    /* Glassmorphism styles for cards */
+    --card-bg-light: rgba(255, 255, 255, 0.6);
+    --card-bg-dark: rgba(25, 35, 45, 0.5);
+    --card-border-light: rgba(255, 255, 255, 0.3);
+    --card-border-dark: rgba(255, 255, 255, 0.1);
+
     --card: 0 0% 100%;
     --card-foreground: 200 65% 10%;
     --popover: 0 0% 100%;
@@ -84,5 +91,15 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  .glassmorphic-card {
+    background: var(--card-bg-light);
+    @apply backdrop-blur-lg border;
+    border-color: var(--card-border-light);
+  }
+
+  .dark .glassmorphic-card {
+    background: var(--card-bg-dark);
+    border-color: var(--card-border-dark);
   }
 }

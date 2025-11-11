@@ -16,6 +16,7 @@ import {
 import { projects } from '@/lib/data';
 import type { Project } from '@/lib/types';
 import { ExternalLink, Github } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -30,7 +31,7 @@ const Projects = () => {
       </div>
       <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
-          <Card key={project.id} className="flex flex-col overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+          <Card key={project.id} className={cn("glassmorphic-card", "flex flex-col overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 bg-transparent")}>
             <div className="aspect-video relative">
               <Image
                 src={project.imageUrl}

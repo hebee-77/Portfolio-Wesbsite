@@ -13,10 +13,10 @@ export default function Home() {
         <section id="home" className="w-full pt-20 md:pt-24 lg:pt-32">
           <Hero />
         </section>
-        <section id="skills" className="w-full py-12 md:py-24 lg:py-32 bg-card">
+        <section id="skills" className="w-full py-12 md:py-24 lg:py-32">
           <Services />
         </section>
-        <section id="projects" className="w-full py-12 md:py-24 lg:py-32 bg-card">
+        <section id="projects" className="w-full py-12 md:py-24 lg:py-32">
           <Projects />
         </section>
         <section id="contact" className="w-full py-12 md:py-24 lg:py-32">
