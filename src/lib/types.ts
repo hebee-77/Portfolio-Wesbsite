@@ -11,12 +11,6 @@ export type Service = {
   description: string;
 };
 
-export type Kpi = {
-  value: string;
-  label: string;
-  description: string;
-};
-
 export type Project = {
   id: string;
   title: string;
@@ -31,11 +25,4 @@ export type Project = {
     githubUrl?: string;
     liveUrl?: string;
   };
-};
-
-export type Testimonial = {
-  quote: string;
-  name: string;
-  role: string;
-  company: string;
 };

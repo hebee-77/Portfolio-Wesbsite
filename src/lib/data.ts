@@ -1,8 +1,6 @@
 import type {
   Service,
-  Kpi,
   Project,
-  Testimonial,
   NavLink,
 } from './types';
 import {
@@ -32,7 +30,6 @@ const findImage = (id: string) => {
 export const navLinks: NavLink[] = [
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
-  { label: 'Experience', href: '#experience' },
   { label: 'Projects', href: '#projects' },
   { label: 'Contact', href: '#contact' },
 ];
@@ -73,33 +70,6 @@ export const services: Service[] = [
     title: 'Data Storytelling',
     description:
       'Translating complex data findings into compelling narratives that are easily understood by non-technical stakeholders.',
-  },
-];
-
-export const kpis: Kpi[] = [
-  {
-    value: '-18%',
-    label: 'Customer Churn',
-    description:
-      'Reduced monthly customer churn by implementing a predictive model that identified at-risk users for proactive engagement.',
-  },
-  {
-    value: '+22%',
-    label: 'Conversion Rate',
-    description:
-      'Increased sign-up conversion rate through A/B testing of landing page designs and optimizing the user onboarding flow.',
-  },
-  {
-    value: '$1.2M',
-    label: 'Pipeline Influence',
-    description:
-      'Influenced sales pipeline by developing a lead scoring model that prioritized high-value prospects for the sales team.',
-  },
-  {
-    value: '4 ETL Jobs',
-    label: 'Automated',
-    description:
-      'Designed and deployed four critical ETL pipelines, automating data ingestion and transformation, which reduced manual effort by 20 hours/week.',
   },
 ];
 
@@ -192,30 +162,6 @@ export const projects: Project[] = [
       githubUrl: '#'
     }
   }
-];
-
-export const testimonials: Testimonial[] = [
-  {
-    quote:
-      'Their ability to translate our complex data into a clear, actionable strategy was a game-changer. The dashboards they built are now an indispensable part of our daily operations.',
-    name: 'Jane Doe',
-    role: 'Head of Marketing',
-    company: 'Innovate Inc.',
-  },
-  {
-    quote:
-      'The churn prediction model was incredibly accurate. It allowed our customer success team to be proactive and saved us from losing key accounts. A phenomenal impact on our bottom line.',
-    name: 'John Smith',
-    role: 'VP of Product',
-    company: 'SaaS Solutions',
-  },
-  {
-    quote:
-      'Working with them was a pleasure. They are not just technically proficient but also excellent communicators who can bridge the gap between data and business.',
-    name: 'Emily White',
-    role: 'COO',
-    company: 'Future Forward',
-  },
 ];
 
 export const socialLinks = [

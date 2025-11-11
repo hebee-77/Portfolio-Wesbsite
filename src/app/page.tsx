@@ -1,9 +1,7 @@
 import Header from '@/components/layout/Header';
 import Hero from '@/components/sections/Hero';
 import Services from '@/components/sections/Services';
-import Kpis from '@/components/sections/Kpis';
 import Projects from '@/components/sections/Projects';
-import Testimonials from '@/components/sections/Testimonials';
 import Contact from '@/components/sections/Contact';
 import Footer from '@/components/sections/Footer';
 
@@ -18,14 +16,8 @@ export default function Home() {
         <section id="skills" className="w-full py-12 md:py-24 lg:py-32 bg-card">
           <Services />
         </section>
-        <section id="experience" className="w-full py-12 md:py-24 lg:py-32">
-          <Kpis />
-        </section>
         <section id="projects" className="w-full py-12 md:py-24 lg:py-32 bg-card">
           <Projects />
-        </section>
-        <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32">
-          <Testimonials />
         </section>
         <section id="contact" className="w-full py-12 md:py-24 lg:py-32">
           <Contact />
