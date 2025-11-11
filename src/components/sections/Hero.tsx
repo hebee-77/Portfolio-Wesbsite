@@ -24,8 +24,8 @@ const Hero = () => {
               Transforming complex data into actionable insights that drive business growth and strategic outcomes.
             </p>
             <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 justify-center lg:justify-start">
-              <Button size="lg" onClick={() => setIsResumeBuilderOpen(true)}>
-                AI Resume Builder
+              <Button size="lg" variant="outline" onClick={() => setIsResumeBuilderOpen(true)}>
+                Download Resume
               </Button>
               <Button size="lg" variant="outline" asChild>
                 <Link href="#projects">View Projects</Link>
