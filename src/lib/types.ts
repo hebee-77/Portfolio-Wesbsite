@@ -39,12 +39,3 @@ export type Testimonial = {
   role: string;
   company: string;
 };
-
-export type Insight = {
-  id: string;
-  title: string;
-  summary: string;
-  date: string;
-  imageUrl: string;
-  imageHint: string;
-};

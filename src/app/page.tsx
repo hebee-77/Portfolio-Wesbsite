@@ -4,7 +4,6 @@ import Services from '@/components/sections/Services';
 import Kpis from '@/components/sections/Kpis';
 import Projects from '@/components/sections/Projects';
 import Testimonials from '@/components/sections/Testimonials';
-import Insights from '@/components/sections/Insights';
 import Contact from '@/components/sections/Contact';
 import Footer from '@/components/sections/Footer';
 
@@ -27,9 +26,6 @@ export default function Home() {
         </section>
         <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32">
           <Testimonials />
-        </section>
-        <section id="insights" className="w-full py-12 md:py-24 lg:py-32 bg-card">
-          <Insights />
         </section>
         <section id="contact" className="w-full py-12 md:py-24 lg:py-32">
           <Contact />

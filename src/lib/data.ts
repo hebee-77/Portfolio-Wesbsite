@@ -3,7 +3,6 @@ import type {
   Kpi,
   Project,
   Testimonial,
-  Insight,
   NavLink,
 } from './types';
 import {
@@ -35,7 +34,6 @@ export const navLinks: NavLink[] = [
   { label: 'Skills', href: '#skills' },
   { label: 'Experience', href: '#experience' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Insights', href: '#insights' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -217,33 +215,6 @@ export const testimonials: Testimonial[] = [
     name: 'Emily White',
     role: 'COO',
     company: 'Future Forward',
-  },
-];
-
-export const insights: Insight[] = [
-  {
-    id: 'insight-1',
-    title: 'A Practical Guide to Cohort Analysis for User Retention',
-    summary:
-      'Dive into the methodology of cohort analysis to understand user behavior over time and measure the true impact of product changes.',
-    date: 'August 15, 2023',
-    ...findImage('insight-1'),
-  },
-  {
-    id: 'insight-2',
-    title: 'Mastering SQL Window Functions for Complex Analytics',
-    summary:
-      'Go beyond basic GROUP BY and learn how window functions can solve complex analytical problems like running totals and rankings with elegant queries.',
-    date: 'July 22, 2023',
-    ...findImage('insight-2'),
-  },
-  {
-    id: 'insight-3',
-    title: '5 Principles of Effective Dashboard Design',
-    summary:
-      'Learn the key principles of visual design and data communication to build dashboards that are not just beautiful, but also insightful and easy to use.',
-    date: 'June 05, 2023',
-    ...findImage('insight-3'),
   },
 ];
 
