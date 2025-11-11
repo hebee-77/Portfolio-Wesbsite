@@ -1,7 +1,7 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { useFormState, useFormStatus } from 'react-dom';
+import { useEffect, useState, useActionState } from 'react';
+import { useFormStatus } from 'react-dom';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -50,7 +50,7 @@ export default function ResumeBuilder({ open, onOpenChange }: ResumeBuilderProps
   const { toast } = useToast();
   const [generatedResume, setGeneratedResume] = useState<string | null>(null);
   
-  const [state, formAction] = useFormState(generateResumeAction, {
+  const [state, formAction] = useActionState(generateResumeAction, {
     success: false,
   });
 
