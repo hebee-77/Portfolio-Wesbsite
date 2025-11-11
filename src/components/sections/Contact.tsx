@@ -1,115 +1,66 @@
 'use client';
 
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
+import { MapPin, Phone, Mail, Github, Linkedin } from 'lucide-react';
 import Link from 'next/link';
 
-import { Button } from '@/components/ui/button';
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { useToast } from '@/hooks/use-toast';
-import { socialLinks } from '@/lib/data';
-
-const contactFormSchema = z.object({
-  name: z.string().min(2, {
-    message: 'Name must be at least 2 characters.',
-  }),
-  email: z.string().email({
-    message: 'Please enter a valid email address.',
-  }),
-  message: z.string().min(10, {
-    message: 'Message must be at least 10 characters.',
-  }),
-});
+const contactDetails = [
+    {
+        icon: MapPin,
+        text: 'Chittoor, Andhra Pradesh',
+        href: 'https://www.google.com/maps/place/Chittoor,+Andhra+Pradesh',
+        isLink: true,
+    },
+    {
+        icon: Mail,
+        text: 'vineethgattu065@gmail.com',
+        href: 'mailto:vineethgattu065@gmail.com',
+        isLink: true,
+    },
+    {
+        icon: Phone,
+        text: '+91 9441450417',
+        href: 'tel:+919441450417',
+        isLink: true,
+    },
+    {
+        icon: Github,
+        text: 'GitHub',
+        href: '#',
+        isLink: true,
+    },
+    {
+        icon: Linkedin,
+        text: 'LinkedIn',
+        href: '#',
+        isLink: true,
+    },
+];
 
 const Contact = () => {
-  const { toast } = useToast();
-  const form = useForm<z.infer<typeof contactFormSchema>>({
-    resolver: zodResolver(contactFormSchema),
-    defaultValues: {
-      name: '',
-      email: '',
-      message: '',
-    },
-  });
-
-  function onSubmit(values: z.infer<typeof contactFormSchema>) {
-    console.log(values);
-    toast({
-      title: 'Message Sent!',
-      description: "Thanks for reaching out. I'll get back to you shortly.",
-    });
-    form.reset();
-  }
-
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="max-w-3xl mx-auto text-center">
+      <div className="max-w-3xl mx-auto text-center mb-12">
         <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Get In Touch</h2>
-        <p className="mt-4 text-lg text-muted-foreground">
-          Have a question or a project in mind? Let's connect.
-        </p>
       </div>
-      <div className="mt-12 max-w-lg mx-auto">
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-            <FormField
-              control={form.control}
-              name="name"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Name</FormLabel>
-                  <FormControl>
-                    <Input placeholder="Your Name" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Email</FormLabel>
-                  <FormControl>
-                    <Input placeholder="your.email@example.com" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="message"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Message</FormLabel>
-                  <FormControl>
-                    <Textarea placeholder="How can I help you?" className="min-h-[120px]" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <Button type="submit" className="w-full">Send Message</Button>
-          </form>
-        </Form>
-        <div className="mt-8 flex justify-center space-x-6">
-          {socialLinks.map((social) => (
-            <Link key={social.name} href={social.url} target="_blank" rel="noopener noreferrer" aria-label={social.name}>
-              <social.icon className="h-6 w-6 text-muted-foreground transition-colors hover:text-primary" />
-            </Link>
-          ))}
+      <div className="max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {contactDetails.map((detail, index) => {
+            const content = (
+              <div key={index} className="flex items-center gap-4">
+                <detail.icon className="h-6 w-6 text-primary" />
+                <span className="text-foreground">{detail.text}</span>
+              </div>
+            );
+
+            if (detail.isLink) {
+              return (
+                <Link href={detail.href} target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-80">
+                  {content}
+                </Link>
+              );
+            }
+            return content;
+          })}
         </div>
       </div>
     </div>

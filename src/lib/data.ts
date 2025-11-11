@@ -177,7 +177,7 @@ export const socialLinks = [
   },
   {
     name: 'Email',
-    url: 'mailto:analyst@example.com',
+    url: 'mailto:vineethgattu065@gmail.com',
     icon: Mail,
   },
 ];
