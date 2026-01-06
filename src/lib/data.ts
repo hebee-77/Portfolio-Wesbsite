@@ -76,10 +76,10 @@ export const services: Service[] = [
 export const projects: Project[] = [
   {
     id: 'proj-1',
-    title: 'Customer Lifetime Value Prediction',
+    title: 'Automobile Sales Analysis EDA',
     description:
-      'Developed a model to predict the lifetime value of customers, enabling targeted marketing campaigns.',
-    tools: ['Python', 'Scikit-learn', 'Pandas', 'SQL'],
+      'This repository contains my Exploratory Data Analysis (EDA) project using Python Pandas. The project focuses on analyzing automobile sales sourced from Kaggle, utilizing google colab for coding.',
+    tools: ['Python', 'Numpy', 'Pandas','Matplotlib', 'Excel'],
     ...findImage('project-1'),
     caseStudy: {
       goal: 'To accurately forecast the total revenue a business can reasonably expect from a single customer account throughout the business relationship.',
@@ -92,10 +92,10 @@ export const projects: Project[] = [
   },
   {
     id: 'proj-2',
-    title: 'Interactive Sales Dashboard',
+    title: 'New Zealand Sales Profit Analysis',
     description:
-      'Designed a real-time sales dashboard in Tableau to monitor performance and identify trends.',
-    tools: ['Tableau', 'SQL', 'Data Blending'],
+      'A complete end-to-end analytics project using SQL Server for data processing and Power BI for dashboard visualization.',
+    tools: ['Power BI', 'SQL Server', 'Github','CSV/Excel'],
     ...findImage('project-2'),
     caseStudy: {
       goal: 'Provide the sales leadership team with a self-service tool to track KPIs, analyze regional performance, and drill down into product-level details.',
@@ -108,10 +108,10 @@ export const projects: Project[] = [
   },
   {
     id: 'proj-3',
-    title: 'A/B Test Analysis Framework',
+    title: 'Sales Store Sales Power-BI Analysis',
     description:
-      'Built a standardized framework in Python for analyzing and reporting on A/B test results.',
-    tools: ['Python', 'Statsmodels', 'Jupyter', 'Plotly'],
+      'This project focuses on designing a comprehensive sales analytics and forecasting dashboard for a retail SuperStore dataset. The goal was to build a single, interactive reporting solution that helps business stakeholders monitor performance, identify growth opportunities, and make data-driven decisions using short-term forecasts.',
+    tools: ['Power BI', 'Excel', 'Google Colab'],
     ...findImage('project-3'),
     caseStudy: {
       goal: 'To create a reusable and statistically rigorous process for determining the winner of product experiments and communicating results to stakeholders.',

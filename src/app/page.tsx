@@ -16,7 +16,7 @@ export default function Home() {
         <section id="skills" className="w-full py-12 md:py-16 lg:py-20">
           <Services />
         </section>
-        <section id="projects" className="w-full pt-8 md:pt-12 lg:pt-16 pb-12 md:pb-16 lg:pb-20">
+        <section id="projects" className="w-full pt-12 md:pt-16 lg:pt-20 pb-12 md:pb-16 lg:pb-20">
           <Projects />
         </section>
         <section id="contact" className="w-full py-12 md:py-16 lg:py-20">
