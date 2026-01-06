@@ -10,6 +10,7 @@ import {
 } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Download } from 'lucide-react';
 
 type ResumeViewerProps = {
@@ -17,7 +18,8 @@ type ResumeViewerProps = {
   onOpenChange: (open: boolean) => void;
 };
 
-const RESUME_PATH = '/Hebee_E_Resume.pdf';
+const RESUME_PDF_PATH = '/Hebee_E_Resume.pdf';
+const RESUME_IMAGE_PATH = '/Hebee_E_Resume.png';
 
 export default function ResumeViewer({ open, onOpenChange }: ResumeViewerProps) {
   return (
@@ -29,16 +31,17 @@ export default function ResumeViewer({ open, onOpenChange }: ResumeViewerProps) 
             You can view the resume below or download it as a PDF.
           </DialogDescription>
         </DialogHeader>
-        <div className="flex-1 px-6 overflow-hidden">
-          <iframe
-            src={RESUME_PATH}
-            className="w-full h-full border rounded-md"
-            title="Hebee E Resume"
+        <div className="flex-1 px-6 overflow-hidden relative">
+          <Image
+            src={RESUME_IMAGE_PATH}
+            alt="Hebee E Resume"
+            fill
+            className="object-contain"
           />
         </div>
         <DialogFooter className="p-6 pt-0 sm:justify-end">
           <Button asChild>
-            <Link href={RESUME_PATH} download="Hebee_E_Resume.pdf">
+            <Link href={RESUME_PDF_PATH} download="Hebee_E_Resume.pdf">
               <Download className="mr-2 h-4 w-4" />
               Download PDF
             </Link>
