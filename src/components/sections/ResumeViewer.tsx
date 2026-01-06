@@ -11,14 +11,13 @@ import {
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Download } from 'lucide-react';
-import { ScrollArea } from '@/components/ui/scroll-area';
 
 type ResumeViewerProps = {
   open: boolean;
   onOpenChange: (open: boolean) => void;
 };
 
-const RESUME_PDF_PATH = '/Hebee_E_Resume.pdf';
+const RESUME_PDF_PATH = '/RESUME_7 copy.pdf';
 
 export default function ResumeViewer({ open, onOpenChange }: ResumeViewerProps) {
   return (
