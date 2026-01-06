@@ -122,46 +122,6 @@ export const projects: Project[] = [
       githubUrl: '#',
     },
   },
-  {
-    id: 'proj-4',
-    title: 'Churn Prediction for SaaS',
-    description:
-      'A machine learning model to identify customers at high risk of churning from a subscription service.',
-    tools: ['Python', 'TensorFlow', 'SQL', 'BigQuery'],
-    ...findImage('project-4'),
-    caseStudy: {
-      goal: 'Proactively identify users likely to cancel their subscription in the next 30 days to enable targeted retention efforts.',
-      method: 'Engineered features from user activity logs, subscription data, and support ticket history. Trained a logistic regression model on a dataset of over 100,000 users. Deployed the model as a weekly batch scoring job.',
-      result: 'The model identified 70% of churning users with a precision of 75%. The subsequent retention campaign reduced overall churn by 12% in the first quarter.',
-      githubUrl: '#'
-    }
-  },
-  {
-    id: 'proj-5',
-    title: 'Marketing Channel Attribution',
-    description: 'Analyzed marketing channel effectiveness by building a multi-touch attribution model.',
-    tools: ['R', 'SQL', 'Google Analytics'],
-    ...findImage('project-5'),
-    caseStudy: {
-      goal: 'Move beyond last-click attribution to understand the entire customer journey and properly allocate marketing spend across channels.',
-      method: 'Extracted raw touchpoint data from Google Analytics. Applied a Markov chain model to assign fractional credit to each channel based on its contribution to conversion paths.',
-      result: 'Revealed that organic search and email marketing were undervalued by 30% and 25% respectively. Reallocation of budget based on these insights led to a 10% increase in overall conversion volume with the same ad spend.',
-      liveUrl: '#',
-    }
-  },
-  {
-    id: 'proj-6',
-    title: 'Automated Financial Reporting',
-    description: 'Automated the generation of monthly financial reports using Python and SQL scripts.',
-    tools: ['Python', 'SQL', 'Airflow'],
-    ...findImage('project-6'),
-    caseStudy: {
-      goal: 'Eliminate manual data pulling and spreadsheet manipulation for month-end financial reporting, reducing errors and saving time.',
-      method: 'Wrote SQL queries to extract raw data from the finance database. Developed Python scripts with Pandas to perform transformations, calculate metrics, and format the output into Excel templates. Orchestrated the entire workflow using Apache Airflow.',
-      result: 'Reduced the time to generate monthly reports from 2 days to 15 minutes. Eliminated all manual data entry errors and provided the finance team with faster access to critical data.',
-      githubUrl: '#'
-    }
-  }
 ];
 
 export const socialLinks = [
