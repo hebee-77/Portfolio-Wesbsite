@@ -1,0 +1,44 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bg-light { fill: hsl(260 80% 55%); }
+      .text-light { fill: hsl(0 0% 98%); }
+      .bg-dark { fill: hsl(265 82% 70%); }
+      .text-dark { fill: hsl(252 30% 12%); }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg-color: var(--bg-dark-color);
+          --text-color: var(--text-dark-color);
+        }
+      }
+      @media (prefers-color-scheme: light) {
+        :root {
+          --bg-color: var(--bg-light-color);
+          --text-color: var(--text-light-color);
+        }
+      }
+    </style>
+    <rect id="bg-light-rect" width="32" height="32" rx="8" class="bg-light"/>
+    <rect id="bg-dark-rect" width="32" height="32" rx="8" class="bg-dark"/>
+    <text id="text-light-h" x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" font-weight="bold" class="text-light">H</text>
+    <text id="text-dark-h" x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" font-weight="bold" class="text-dark">H</text>
+  </defs>
+
+  <g>
+    <use href="#bg-light-rect" />
+    <use href="#text-light-h" />
+  </g>
+
+  <style>
+    @media (prefers-color-scheme: dark) {
+      g { display: none; }
+      g#dark-theme { display: block; }
+    }
+  </style>
+
+  <g id="dark-theme" style="display:none;">
+    <use href="#bg-dark-rect" />
+    <use href="#text-dark-h" />
+  </g>
+</svg>

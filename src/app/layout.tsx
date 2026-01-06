@@ -10,6 +10,9 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 export const metadata: Metadata = {
   title: "Hebee's Portfolio",
   description: 'A personal portfolio for a Data Analyst.',
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({
