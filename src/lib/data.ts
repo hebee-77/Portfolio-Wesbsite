@@ -98,12 +98,12 @@ export const projects: Project[] = [
     tools: ['Power BI', 'SQL Server', 'Github','CSV/Excel'],
     ...findImage('project-2'),
     caseStudy: {
-      goal: 'Provide the sales leadership team with a self-service tool to track KPIs, analyze regional performance, and drill down into product-level details.',
+      goal: 'To analyze sales and profit data for a business in New Zealand, creating a comprehensive Power BI dashboard to track Key Performance Indicators (KPIs) and provide actionable insights for strategic decision-making.',
       method:
-        'Connected to multiple data sources including Salesforce and an internal ERP database. Created calculated fields and interactive filters for dynamic analysis. Published the dashboard to Tableau Server for company-wide access.',
+        'The project involved creating an interactive dashboard using Power BI with slicers and filters for easy data exploration. Key metrics such as total sales, profit, quantity sold, and profit margin were monitored. Data Analysis Expressions (DAX) were used to create custom calculations and measures for deeper analysis of product performance, customer segments, and geographical sales distribution.',
       result:
-        'Reduced time for weekly reporting from 4 hours to 30 minutes. Enabled sales managers to identify underperforming regions 40% faster, leading to timely interventions.',
-      liveUrl: '#',
+        'The final dashboard provided a clear view of business performance, identifying top-selling products and high-value customer segments. Geographical analysis visualized sales hotspots across New Zealand, enabling targeted marketing efforts and optimized inventory management. The tool empowers stakeholders to make data-driven decisions.',
+      githubUrl: 'https://github.com/hebee-77/New-Zealand-Sales-Profit-Analysis',
     },
   },
   {
