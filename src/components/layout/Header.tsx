@@ -56,7 +56,7 @@ const Header = () => {
     <header
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        isScrolled ? 'bg-card/80 backdrop-blur-lg border-b' : 'bg-transparent'
+        isScrolled ? 'bg-background/80 backdrop-blur-lg border-b border-white/10' : 'bg-transparent'
       )}
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -79,7 +79,7 @@ const Header = () => {
                   <Menu className="h-6 w-6" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right">
+              <SheetContent side="right" className="bg-background">
                 <div className="flex justify-between items-center p-4 border-b">
                    <Link href="#home" className="flex items-center gap-2 text-lg font-bold text-primary">
                       <BarChart2 className="h-5 w-5" />

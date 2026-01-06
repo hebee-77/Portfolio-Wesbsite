@@ -24,7 +24,7 @@ const Hero = () => {
               Transforming complex data into actionable insights that drive business growth and strategic outcomes.
             </p>
             <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 justify-center lg:justify-start">
-               <Button size="lg" variant="outline" onClick={() => setIsResumeOpen(true)}>
+               <Button size="lg" variant="default" onClick={() => setIsResumeOpen(true)}>
                 View Resume
               </Button>
               <Button size="lg" variant="outline" asChild>
