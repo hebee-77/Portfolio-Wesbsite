@@ -38,9 +38,9 @@ const Hero = () => {
                 src={heroImage.imageUrl}
                 alt={heroImage.description}
                 data-ai-hint={heroImage.imageHint}
-                width={450}
-                height={450}
-                className="rounded-full object-cover shadow-lg"
+                width={280}
+                height={280}
+                className="rounded-3xl object-cover shadow-lg"
                 priority
               />
             )}
