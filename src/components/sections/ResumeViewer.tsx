@@ -20,7 +20,7 @@ type ResumeViewerProps = {
 };
 
 const RESUME_IMAGE_PATH = '/Hebee_E_Resume.png';
-const RESUME_PDF_PATH = '/RESUME_7 copy.pdf';
+const RESUME_PDF_PATH = '/Hebee_E_Resume.pdf';
 
 export default function ResumeViewer({ open, onOpenChange }: ResumeViewerProps) {
   return (
