@@ -108,18 +108,18 @@ export const projects: Project[] = [
   },
   {
     id: 'proj-3',
-    title: 'Sales Store Sales Power-BI Analysis',
+    title: 'SuperStore Sales Power-BI Analysis',
     description:
       'This project focuses on designing a comprehensive sales analytics and forecasting dashboard for a retail SuperStore dataset.',
     tools: ['Power BI', 'Excel', 'Google Colab'],
     ...findImage('project-3'),
     caseStudy: {
-      goal: 'To create a reusable and statistically rigorous process for determining the winner of product experiments and communicating results to stakeholders.',
+      goal: 'To design a comprehensive sales analytics and forecasting dashboard to provide deep insights into sales performance, customer behavior, and product trends, while also predicting future sales to support strategic decision-making.',
       method:
-        'Developed a Python class that takes experiment data as input, performs statistical tests (t-tests, chi-squared), calculates confidence intervals, and generates a standardized report with visualizations.',
+        'An interactive Power BI dashboard was developed to track KPIs like sales, profit, and profit margin. The dashboard includes detailed analysis of customer segments, product performance, and shipping status. Time series forecasting was implemented to predict future sales, aiding in inventory management and strategic planning.',
       result:
-        'Ensured statistical significance in all reported results, eliminating false positives. Reduced analysis time per experiment by 75% and standardized reporting across the product team.',
-      githubUrl: '#',
+        'The resulting dashboard offers a user-friendly interface with slicers and filters for easy data exploration. It successfully identifies high-value customers and popular products, and the sales forecasting feature provides a reliable basis for future inventory and sales strategies. The project delivers actionable insights for the retail business.',
+      githubUrl: 'https://github.com/hebee-77/Super-Store-Sales-Powerbi-Dashboard',
     },
   },
 ];
