@@ -13,13 +13,75 @@ import {
   DialogTitle,
   DialogDescription,
 } from '@/components/ui/dialog';
+import {
+  Drawer,
+  DrawerContent,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerDescription,
+  DrawerTrigger,
+  DrawerClose
+} from '@/components/ui/drawer';
 import { projects } from '@/lib/data';
 import type { Project } from '@/lib/types';
 import { ExternalLink, Github } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useIsMobile } from '@/hooks/use-mobile';
+import { ScrollArea } from '../ui/scroll-area';
+
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const isMobile = useIsMobile();
+
+  const handleOpenChange = (isOpen: boolean) => {
+    if (!isOpen) {
+      setSelectedProject(null);
+    }
+  };
+
+  const CaseStudyContent = ({ project }: { project: Project }) => (
+    <>
+      <DialogHeader>
+        <DialogTitle className="text-2xl">{project.title}</DialogTitle>
+        <DialogDescription>
+          {project.description}
+        </DialogDescription>
+      </DialogHeader>
+      <ScrollArea className="flex-1 overflow-y-auto pr-2 space-y-6">
+        <div>
+            <h3 className="font-semibold text-lg mb-2 text-primary">Goal</h3>
+            <p className="text-muted-foreground">{project.caseStudy.goal}</p>
+        </div>
+        <div>
+            <h3 className="font-semibold text-lg mb-2 text-primary">Method</h3>
+            <p className="text-muted-foreground">{project.caseStudy.method}</p>
+        </div>
+        <div>
+            <h3 className="font-semibold text-lg mb-2 text-primary">Result</h3>
+            <p className="text-muted-foreground">{project.caseStudy.result}</p>
+        </div>
+      </ScrollArea>
+       <div className="mt-4 flex items-center gap-4">
+        {project.caseStudy.githubUrl && (
+          <Button variant="outline" asChild>
+            <Link href={project.caseStudy.githubUrl} target="_blank">
+              <Github className="mr-2 h-4 w-4" />
+              View on GitHub
+            </Link>
+          </Button>
+        )}
+        {project.caseStudy.liveUrl && (
+          <Button variant="outline" asChild>
+            <Link href={project.caseStudy.liveUrl} target="_blank">
+              <ExternalLink className="mr-2 h-4 w-4" />
+              View Live Demo
+            </Link>
+          </Button>
+        )}
+      </div>
+    </>
+  );
 
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -29,7 +91,7 @@ const Projects = () => {
           A selection of projects that demonstrate my skills in data analysis, modeling, and visualization.
         </p>
       </div>
-      <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
           <Card key={project.id} className={cn("glassmorphic-card", "flex flex-col overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1")}>
             <div className="aspect-video relative">
@@ -59,52 +121,19 @@ const Projects = () => {
         ))}
       </div>
 
-      <Dialog open={!!selectedProject} onOpenChange={() => setSelectedProject(null)}>
-        <DialogContent className="sm:max-w-3xl max-h-[90vh] flex flex-col">
-          {selectedProject && (
-            <>
-              <DialogHeader>
-                <DialogTitle className="text-2xl">{selectedProject.title}</DialogTitle>
-                <DialogDescription>
-                  {selectedProject.description}
-                </DialogDescription>
-              </DialogHeader>
-              <div className="flex-1 overflow-y-auto pr-2 space-y-6">
-                <div>
-                    <h3 className="font-semibold text-lg mb-2 text-primary">Goal</h3>
-                    <p className="text-muted-foreground">{selectedProject.caseStudy.goal}</p>
-                </div>
-                <div>
-                    <h3 className="font-semibold text-lg mb-2 text-primary">Method</h3>
-                    <p className="text-muted-foreground">{selectedProject.caseStudy.method}</p>
-                </div>
-                <div>
-                    <h3 className="font-semibold text-lg mb-2 text-primary">Result</h3>
-                    <p className="text-muted-foreground">{selectedProject.caseStudy.result}</p>
-                </div>
-              </div>
-               <div className="mt-4 flex items-center gap-4">
-                {selectedProject.caseStudy.githubUrl && (
-                  <Button variant="outline" asChild>
-                    <Link href={selectedProject.caseStudy.githubUrl} target="_blank">
-                      <Github className="mr-2 h-4 w-4" />
-                      View on GitHub
-                    </Link>
-                  </Button>
-                )}
-                {selectedProject.caseStudy.liveUrl && (
-                  <Button variant="outline" asChild>
-                    <Link href={selectedProject.caseStudy.liveUrl} target="_blank">
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      View Live Demo
-                    </Link>
-                  </Button>
-                )}
-              </div>
-            </>
-          )}
-        </DialogContent>
-      </Dialog>
+      {isMobile ? (
+        <Drawer open={!!selectedProject} onOpenChange={handleOpenChange}>
+            <DrawerContent className="p-4">
+              {selectedProject && <CaseStudyContent project={selectedProject} />}
+            </DrawerContent>
+        </Drawer>
+      ) : (
+        <Dialog open={!!selectedProject} onOpenChange={handleOpenChange}>
+          <DialogContent className="sm:max-w-3xl h-[90vh] flex flex-col">
+            {selectedProject && <CaseStudyContent project={selectedProject} />}
+          </DialogContent>
+        </Dialog>
+      )}
     </div>
   );
 };
