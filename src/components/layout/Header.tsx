@@ -2,15 +2,18 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, BarChart2 } from 'lucide-react';
+import { Menu, X, BarChart2, Sun, Moon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 import { navLinks } from '@/lib/data';
+import { useTheme } from '@/components/theme-provider';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeLink, setActiveLink] = useState('#home');
+  const { theme, setTheme } = useTheme();
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,10 +70,20 @@ const Header = () => {
               <span>Hebee E</span>
             </Link>
           </div>
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center">
             <ul className="ml-10 flex items-baseline space-x-4">
               {renderNavLinks()}
             </ul>
+             <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+              className="ml-4"
+              aria-label="Toggle theme"
+            >
+              <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+              <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+            </Button>
           </div>
           <div className="md:hidden">
             <Sheet>
@@ -93,6 +106,19 @@ const Header = () => {
                 </div>
                 <ul className="mt-6 space-y-2 px-2">
                   {renderNavLinks(true)}
+                   <li>
+                     <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                        className="w-full justify-start"
+                        aria-label="Toggle theme"
+                      >
+                        <Sun className="h-5 w-5 mr-2 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+                        <Moon className="absolute h-5 w-5 mr-2 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                        Toggle Theme
+                      </Button>
+                   </li>
                 </ul>
               </SheetContent>
             </Sheet>
