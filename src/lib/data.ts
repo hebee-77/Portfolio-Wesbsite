@@ -78,7 +78,7 @@ export const projects: Project[] = [
     id: 'proj-1',
     title: 'Automobile Sales Analysis EDA',
     description:
-      'This repository contains my Exploratory Data Analysis (EDA) project using Python Pandas. The project focuses on analyzing automobile sales sourced from Kaggle, utilizing google colab for coding.',
+      'This repository contains my Exploratory Data Analysis (EDA) project using Python Pandas.',
     tools: ['Python', 'Numpy', 'Pandas','Matplotlib', 'Excel'],
     ...findImage('project-1'),
     caseStudy: {
@@ -110,7 +110,7 @@ export const projects: Project[] = [
     id: 'proj-3',
     title: 'Sales Store Sales Power-BI Analysis',
     description:
-      'This project focuses on designing a comprehensive sales analytics and forecasting dashboard for a retail SuperStore dataset. The goal was to build a single, interactive reporting solution that helps business stakeholders monitor performance, identify growth opportunities, and make data-driven decisions using short-term forecasts.',
+      'This project focuses on designing a comprehensive sales analytics and forecasting dashboard for a retail SuperStore dataset.',
     tools: ['Power BI', 'Excel', 'Google Colab'],
     ...findImage('project-3'),
     caseStudy: {
@@ -127,17 +127,17 @@ export const projects: Project[] = [
 export const socialLinks = [
   {
     name: 'LinkedIn',
-    url: '#',
+    url: 'https://www.linkedin.com/in/hebee/',
     icon: Linkedin,
   },
   {
     name: 'GitHub',
-    url: '#',
+    url: 'https://github.com/hebee-77',
     icon: Github,
   },
   {
     name: 'Email',
-    url: 'mailto:vineethgattu065@gmail.com',
+    url: 'mailto:hebeectr2004@gmail.com',
     icon: Mail,
   },
 ];
