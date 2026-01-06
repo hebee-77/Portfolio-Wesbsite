@@ -17,7 +17,7 @@ type ResumeViewerProps = {
   onOpenChange: (open: boolean) => void;
 };
 
-const RESUME_PDF_PATH = '/Hebee_E_Resume.pdf';
+const RESUME_PDF_PATH = '/RESUME_7 copy.pdf';
 
 export default function ResumeViewer({ open, onOpenChange }: ResumeViewerProps) {
   return (
