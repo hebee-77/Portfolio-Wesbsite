@@ -8,7 +8,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
-  title: 'Data Insights Portfolio',
+  title: "Hebee's Portfolio",
   description: 'A personal portfolio for a Data Analyst.',
 };
 
