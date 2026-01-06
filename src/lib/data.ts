@@ -82,12 +82,12 @@ export const projects: Project[] = [
     tools: ['Python', 'Numpy', 'Pandas','Matplotlib', 'Excel'],
     ...findImage('project-1'),
     caseStudy: {
-      goal: 'To accurately forecast the total revenue a business can reasonably expect from a single customer account throughout the business relationship.',
+      goal: 'To conduct a comprehensive Exploratory Data Analysis (EDA) on automobile sales data to uncover trends, patterns, and insights that can inform business strategies related to sales, marketing, and inventory management.',
       method:
-        'Utilized historical transaction data and customer behavior metrics. Trained a regression model (XGBoost) after extensive feature engineering to predict future spending. The model was validated against a hold-out dataset.',
+        'The analysis was performed in Python using libraries like Pandas for data manipulation, and Matplotlib/Seaborn for visualization. The process involved data cleaning, handling missing values, and performing univariate, bivariate, and multivariate analysis to explore relationships between different vehicle attributes and sales metrics.',
       result:
-        'The model achieved an R-squared of 0.82, providing a strong basis for budget allocation in marketing. Led to a 15% increase in marketing ROI by focusing on high-value customer segments.',
-      githubUrl: '#',
+        'Identified the most popular car models and manufacturers to focus marketing. Analyzed relationships between vehicle attributes (e.g., engine size, horsepower) and price for pricing strategies. Visualized sales distribution across regions, highlighting key markets and seasonal trends for better inventory planning.',
+      githubUrl: 'https://github.com/hebee-77/Automobile-Sales-Exploratory-Data-Analysis-EDA-',
     },
   },
   {
