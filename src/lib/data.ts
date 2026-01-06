@@ -13,6 +13,10 @@ import {
   Github,
   Linkedin,
   Mail,
+  LineChart,
+  FileCog,
+  Server,
+  Replace,
 } from 'lucide-react';
 import { PlaceHolderImages } from './placeholder-images';
 
@@ -36,40 +40,40 @@ export const navLinks: NavLink[] = [
 
 export const services: Service[] = [
   {
-    icon: Database,
-    title: 'SQL Analytics',
+    icon: Code,
+    title: 'Python & SQL',
     description:
-      'Leveraging advanced SQL to uncover deep insights from complex datasets and drive strategic decisions.',
+      'Utilizing Python and SQL for data manipulation, analysis, and automation to extract actionable insights from data.',
+  },
+  {
+    icon: LineChart,
+    title: 'NumPy, Pandas, & Matplotlib',
+    description:
+      'Leveraging Python libraries for advanced numerical analysis, data manipulation, and creating insightful visualizations.',
   },
   {
     icon: LayoutDashboard,
-    title: 'Dashboarding (Power BI/Tableau)',
+    title: 'Power BI & Excel',
     description:
-      'Creating interactive and intuitive dashboards that provide clear, actionable business intelligence.',
+      'Building interactive dashboards and reports with Power BI and Excel to visualize data and track key metrics.',
   },
   {
-    icon: Code,
-    title: 'Python Automation',
+    icon: Server,
+    title: 'SQL Server, MySQL, & MongoDB',
     description:
-      'Developing custom Python scripts to automate data processing, cleaning, and reporting tasks, saving time and reducing errors.',
+      'Working with relational and NoSQL databases to store, query, and manage large datasets efficiently.',
+  },
+  {
+    icon: Replace,
+    title: 'Data Cleaning & Transformation',
+    description:
+      'Implementing structured pipelines for cleaning and transforming raw data into analysis-ready formats.',
   },
   {
     icon: Beaker,
-    title: 'Experimentation & A/B Testing',
+    title: 'EDA & Forecasting',
     description:
-      'Designing and analyzing controlled experiments to validate hypotheses and optimize product features for user engagement.',
-  },
-  {
-    icon: TrendingUp,
-    title: 'Forecasting',
-    description:
-      'Applying statistical models to historical data to predict future trends in sales, user behavior, and market dynamics.',
-  },
-  {
-    icon: PenSquare,
-    title: 'Data Storytelling',
-    description:
-      'Translating complex data findings into compelling narratives that are easily understood by non-technical stakeholders.',
+      'Performing Exploratory Data Analysis (EDA) and applying forecasting models to uncover trends and predict outcomes.',
   },
 ];
 
